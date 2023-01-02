@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  height: 60px;
+  padding: 0 30px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+}
+
+.header a {
+  color: gray;
+  margin-right: 20px;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.logo {
+  color: red;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.log a {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header ul {
+    margin: 20px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header a {
+    margin-right: 0;
+  }
+
+  .logo {
+    margin: 20ox 0;
+  }
+}
