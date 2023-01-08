@@ -1,4 +1,4 @@
-const { events } = require("./data.json");
+const { events } = require("./fakedata.json");
 
 export default function handler(req, res) {
   if (req.method === "GET") {
