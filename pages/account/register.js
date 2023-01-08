@@ -17,7 +17,22 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const { register, error } = useContext(AuthContext);
+  const { register, error, resetError } = useContext(AuthContext);
+
+  useEffect(() => {
+    error &&
+      toast.error(error, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+    resetError();
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +41,7 @@ export default function RegisterPage() {
       toast.error("Passwords do not match!");
       return;
     }
-    register({ email, password, passwordConfirm });
+    register({ username, email, password });
   };
 
   return (

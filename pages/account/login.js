@@ -15,9 +15,22 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { login, error } = useContext(AuthContext);
+  const { login, error, resetError } = useContext(AuthContext);
 
-  // useEffect(() => error && toast.error(error));
+  useEffect(() => {
+    error &&
+      toast.error(error, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      });
+    resetError();
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
