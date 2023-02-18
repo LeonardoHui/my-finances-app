@@ -5,25 +5,22 @@ import styles from "@/styles/EventItem.module.css";
 
 export default function EventItem({ evt }) {
   return (
-    <div className={styles.events}>
-      <div className={styles.img}>
-        <Image
-          src={evt.image ? evt.image : "/images/default.png"}
-          width={170}
-          height={100}
-        />
+    <div
+      className={styles.events}
+      style={{
+        display: "grid",
+        placeItems: "center",
+        gridTemplateColumns: "repeat(3, 1fr)",
+      }}
+    >
+      <div className={styles.info}>
+        <t>{evt.date}</t>
       </div>
       <div className={styles.info}>
-        <span>
-          {evt.date} at {evt.time}
-        </span>
-        <h3>{evt.name}</h3>
+        <t>R$ {(evt.amount / 100).toFixed(2)}</t>
       </div>
-
-      <div className={styles.link}>
-        <Link href={`/events/${evt.slug}`}>
-          <button>Details</button>
-        </Link>
+      <div>
+        <t>{evt.transaction_type}</t>
       </div>
     </div>
   );

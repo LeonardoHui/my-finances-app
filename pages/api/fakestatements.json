@@ -1,0 +1,29 @@
+{
+  "statements": [
+    {
+      "transaction_type": "debit",
+      "amount": 100,
+      "date": "2022-01-01 00:00"
+    },
+    {
+      "transaction_type": "debit",
+      "amount": 150,
+      "date": "2022-01-01 00:00"
+    },
+    {
+      "transaction_type": "credit",
+      "amount": 200,
+      "date": "2022-01-01 00:00"
+    },
+    {
+      "transaction_type": "credit",
+      "amount": 250,
+      "date": "2022-01-01 00:00"
+    },
+    {
+      "transaction_type": "interest",
+      "amount": 299,
+      "date": "2022-01-01 00:00"
+    }
+  ]
+}

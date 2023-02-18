@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/Hero.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -37,7 +38,7 @@ export default function Hero() {
           </Link>
         </div>
         <div>
-          <img src="/images/piechart.png" />
+          <Image src="/images/piechart.png" width={300} height={300} />
         </div>
       </div>
       <div
@@ -50,7 +51,7 @@ export default function Hero() {
         }}
       >
         <div>
-          <img src="/images/barchart.png" />
+          <Image src="/images/barchart.png" width={300} height={300} />
         </div>
         <div>
           <p className="text-muted mb-4 pb-2">
