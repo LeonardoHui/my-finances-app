@@ -1,21 +1,35 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: white;
-  color: black;
+  background: rgb(0, 0, 90);
   height: 6vh;
-  padding: 0 30px;
-  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+  padding: 0 10vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 90, 0.5);
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  align-items: center;
+  background: rgb(0, 0, 90);
 }
 
 .header a {
-  color: gray;
-  margin-right: 20px;
+  color: rgb(225, 225, 255);
+  margin: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.login {
+  text-transform: uppercase;
 }
 
 .header a:hover {
-  color: black;
+  color: rgb(200, 200, 255);
 }
 
 .header ul {
@@ -23,16 +37,20 @@
   align-items: center;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
-.logo {
-  color: red;
-  font-size: 20px;
+.logo a {
+  color: gold;
   text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: serif;
+  font-size: 28px;
 }
 
-.log a {
-  color: red;
+.logo a:hover {
+  color: goldenrod;
 }
 
 @media (max-width: 768px) {

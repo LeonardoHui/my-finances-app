@@ -14,38 +14,56 @@ export default function Header() {
       <div className={styles.logo}>
         <Link href="/">My Finances</Link>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/events">events</Link>
-          </li>
-
-          {user ? (
-            // If logged in
-            <>
-              <li>
-                <Link href="/something">something visable only logged in</Link>
-              </li>
-              <li>
-                <button onClick={() => logout()}>
-                  <FaSignOutAlt /> Logout
-                </button>
-              </li>
-            </>
-          ) : (
-            // If logged out
-            <>
-              <li>
-                <Link href="/account/login">
-                  <button>
-                    <FaSignInAlt /> Login
+      <div className={styles.subheader}>
+        {user ? (
+          <div></div>
+        ) : (
+          <>
+            <nav>
+              <ul>
+                <li>
+                  <Link href="/solutions">Solutions</Link>
+                </li>
+                <li>
+                  <Link href="/pricing">Pricing</Link>
+                </li>
+                <li>
+                  <Link href="/about">About us</Link>
+                </li>
+              </ul>
+            </nav>
+          </>
+        )}
+        <nav className={styles.login}>
+          <ul>
+            {user ? (
+              // If logged in
+              <>
+                <li>
+                  <Link href="/something">
+                    something visable only logged in
+                  </Link>
+                </li>
+                <li>
+                  <button onClick={() => logout()}>
+                    <FaSignOutAlt /> Logout
                   </button>
-                </Link>
-              </li>
-            </>
-          )}
-        </ul>
-      </nav>
+                </li>
+              </>
+            ) : (
+              // If logged out
+              <>
+                <li>
+                  <Link href="/account/register">Sign up</Link>
+                </li>
+                <li>
+                  <Link href="/account/login">Login</Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
