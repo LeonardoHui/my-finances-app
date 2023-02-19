@@ -1,6 +1,8 @@
 .error {
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 100px 0 200px;
+  margin: 20vh auto;
 }
 
 .error h1 {

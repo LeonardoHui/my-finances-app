@@ -4,7 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body
+        style={
+          // control global css here
+          { margin: 0 }
+        }
+      >
         <Main />
         <NextScript />
       </body>

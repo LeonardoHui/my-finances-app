@@ -19,7 +19,6 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
 
       <Header />
-
       <div className={styles.container}>{children}</div>
       <Footer />
     </div>
