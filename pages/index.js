@@ -16,9 +16,9 @@ export function LandingContent() {
   return (
     <section className={styles.section}>
       <div className={styles.hero}>
-        <h1>Get your finances in order</h1>
-        <h1>And</h1>
-        <h1> Unlock your financial freedom</h1>
+        <div className={styles.textbox}>
+          <p>Get your finances in order and unlock your financial freedom</p>
+        </div>
         <div className={styles.button}>
           <Link className={styles.link} href="/account/register">
             <p className={styles.text}>Start Now!</p>

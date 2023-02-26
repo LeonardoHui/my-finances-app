@@ -40,11 +40,6 @@ export default function Header() {
               // If logged in
               <>
                 <li>
-                  <Link href="/something">
-                    something visable only logged in
-                  </Link>
-                </li>
-                <li>
                   <button onClick={() => logout()}>
                     <FaSignOutAlt /> Logout
                   </button>
