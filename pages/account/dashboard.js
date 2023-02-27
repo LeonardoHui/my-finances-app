@@ -7,6 +7,8 @@ import Statement from "@/components/Statement";
 import Investments from "@/components/Investments";
 
 import styles from "@/styles/Dashboard.module.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const STATEMENTS = "STATEMENTS";
 const INVESTMENTS = "INVESTMENTS";
@@ -26,6 +28,7 @@ export default function DashboardPage({ statements }) {
 
   return (
     <Layout>
+      <Header />
       <div className={styles.layout}>
         <div>
           <button

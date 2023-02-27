@@ -1,11 +1,10 @@
 .section {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  height: 94vh;
-  width: 100vw;
-  background: linear-gradient(145deg, rgb(0, 0, 90) 55%, rgba(0, 140, 255, 0.5)),
-    rgb(0, 0, 90);
+  height: 88vh;
+  width: 100%;
+  /* background: linear-gradient(rgb(0, 0, 90) 10%, rgba(0, 140, 255, 0.6)); */
 }
 
 .hero {
@@ -22,7 +21,7 @@
   font-size: 46px;
   letter-spacing: 2px;
   word-spacing: 4px;
-  margin: 0;
+  margin: 25% auto 0 auto;
 }
 
 .button {

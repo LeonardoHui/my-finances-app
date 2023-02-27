@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "@/styles/Charts.module.css";
+
 // Do not remove Chart
 import { Chart } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
@@ -62,7 +64,7 @@ export default function PieChart({ chartData, chartTitle }) {
   };
 
   return (
-    <div>
+    <div className={styles.chart}>
       <Pie data={pieData} options={pieOptions} />
     </div>
   );

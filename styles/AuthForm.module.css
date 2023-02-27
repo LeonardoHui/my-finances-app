@@ -1,8 +1,14 @@
+.container {
+  height: 88vh;
+  width: 100vw;
+}
+
 .auth {
   max-width: 600px;
   width: 100%;
   margin: 50px auto;
   padding: 30px;
+  background-color: #a5d8ff;
   box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
 }
 

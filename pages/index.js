@@ -1,13 +1,17 @@
 import React from "react";
 import styles from "@/styles/Landing.module.css";
 import Link from "next/link";
-import Image from "next/image";
+
+import Header from "@/components/Header";
 import Layout from "@/components/Layout";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <Layout>
+      <Header />
       <LandingContent />
+      <Footer />
     </Layout>
   );
 }
