@@ -16,7 +16,11 @@ export default function Header() {
       </div>
       <div className={styles.subheader}>
         {user ? (
-          <div></div>
+          <div>
+            <li>
+              <Link href="/account/dashboard">Account</Link>
+            </li>
+          </div>
         ) : (
           <>
             <nav>
