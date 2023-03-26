@@ -6,10 +6,10 @@
 }
 
 .list {
-  background-color: rgb(30, 0, 150);
-  border-radius: 15px;
+  background-color: rgb(30, 0, 155);
+  border-radius: 10px;
   padding: 0 30px;
-  box-shadow: -5px 5px 5px rgba(0, 0, 255, 0.25);
+  box-shadow: -5px 5px 5px rgba(25, 0, 100, 0.4);
   overflow: hidden;
   overflow-y: scroll;
   height: 100%;
@@ -19,11 +19,16 @@
   padding-left: 30px;
 }
 
-/* .list::-webkit-scrollbar {
-  width: 50px;
+.list::-webkit-scrollbar {
+  width: 20px;
 }
 
-.list::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+/* .list::-webkit-scrollbar-track {
+  background: blue;
 } */
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 75, 225, 0.75);
+  border-radius: 20px;
+  /* outline: 1px solid blue; */
+}
