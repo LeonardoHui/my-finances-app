@@ -36,8 +36,9 @@ export default function PieChart({ chartData, chartTitle }) {
       {
         data: [],
         backgroundColor: [],
-        borderWidth: 0,
-        // borderColor:[],
+        borderWidth: 2,
+        borderColor: ["rgba(0,0,125,0.25)"],
+        hoverOffset: 12,
       },
     ],
   };
@@ -63,6 +64,9 @@ export default function PieChart({ chartData, chartTitle }) {
       legend: {
         display: false,
       },
+    },
+    layout: {
+      padding: 6,
     },
   };
 
