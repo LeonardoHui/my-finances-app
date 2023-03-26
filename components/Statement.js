@@ -20,7 +20,9 @@ export default function Statement({ list }) {
 
       <List listData={list} listTitle="Bank Balance" />
 
-      <PieChart chartData={testData} chartTitle={"Test title"} />
+      <div className={styles.chart}>
+        <PieChart chartData={testData} chartTitle={"Balance Distribution"} />
+      </div>
     </section>
   );
 }

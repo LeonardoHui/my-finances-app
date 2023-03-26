@@ -9,7 +9,7 @@ export default function EventItem({ evt }) {
       className={styles.events}
       style={{
         display: "grid",
-        placeItems: "center",
+        placeItems: "start",
         gridTemplateColumns: "repeat(3, 1fr)",
       }}
     >
@@ -19,7 +19,7 @@ export default function EventItem({ evt }) {
       <div className={styles.info}>
         <t>R$ {(evt.amount / 100).toFixed(2)}</t>
       </div>
-      <div>
+      <div className={styles.info}>
         <t>{evt.transaction_type}</t>
       </div>
     </div>

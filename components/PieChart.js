@@ -9,14 +9,14 @@ import { Pie } from "react-chartjs-2";
 function random_rgba() {
   var o = Math.round,
     r = Math.random,
-    s = 200; //Not 255 to avoid full white
+    p = 155;
   return (
     "rgb(" +
-    o(r() * s) +
+    o(r() * 255) +
     "," +
-    o(r() * s + 55) + //+25 to avoid full black
+    o(r() * p + 100) + // +55 tp avoid full black
     "," +
-    o(r() * s) +
+    "0" +
     ")"
   );
 }
@@ -36,6 +36,8 @@ export default function PieChart({ chartData, chartTitle }) {
       {
         data: [],
         backgroundColor: [],
+        borderWidth: 0,
+        // borderColor:[],
       },
     ],
   };
@@ -52,11 +54,12 @@ export default function PieChart({ chartData, chartTitle }) {
 
   const pieOptions = {
     plugins: {
-      title: {
-        display: true,
-        text: chartTitle,
-        font: { size: 20 },
-      },
+      // title: {
+      //   display: true,
+      //   text: chartTitle,
+      //   font: { size: 20 },
+      //   color: "white",
+      // },
       legend: {
         display: false,
       },
@@ -64,8 +67,11 @@ export default function PieChart({ chartData, chartTitle }) {
   };
 
   return (
-    <div className={styles.chart}>
-      <Pie data={pieData} options={pieOptions} />
+    <div className={styles.container}>
+      <h1 className={styles.h1}>{chartTitle}</h1>
+      <div className={styles.chart}>
+        <Pie data={pieData} options={pieOptions} />
+      </div>
     </div>
   );
 }

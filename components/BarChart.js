@@ -20,7 +20,9 @@ export default function BarChart({ chartData, chartTitle }) {
     datasets: [
       {
         data: [],
-        backgroundColor: "rgb(225, 225, 0)",
+        categoryPercentage: 1, //  bars proximity
+        barPercentage: 0.95, //  bars proximity
+        backgroundColor: "rgb(125, 255, 0)",
       },
     ],
   };
@@ -35,20 +37,34 @@ export default function BarChart({ chartData, chartTitle }) {
 
   const barOptions = {
     plugins: {
-      title: {
-        display: true,
-        text: chartTitle,
-        font: { size: 20 },
-      },
+      // title: {
+      //   display: true,
+      //   text: chartTitle,
+      //   font: { size: 20 },
+      // },
       legend: {
         display: false,
       },
     },
+    scales: {
+      x: {
+        // grid: { color: "gray" },
+        ticks: { color: "white" },
+      },
+      y: {
+        // grid: { color: "gray" },
+        ticks: { color: "white" },
+      },
+    },
+    maintainAspectRatio: false,
   };
 
   return (
-    <div className={styles.chart}>
-      <Bar data={barData} options={barOptions} />
+    <div className={styles.container}>
+      <h1 className={styles.h1}>{chartTitle}</h1>
+      <div className={styles.chart}>
+        <Bar data={barData} options={barOptions} />
+      </div>
     </div>
   );
 }

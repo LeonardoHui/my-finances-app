@@ -30,19 +30,9 @@ export default function DashboardPage({ statements }) {
     <Layout>
       <Header />
       <div className={styles.layout}>
-        <div>
-          <button
-            className={styles.buttons}
-            onClick={() => setPage(STATEMENTS)}
-          >
-            {STATEMENTS}
-          </button>
-          <button
-            className={styles.buttons}
-            onClick={() => setPage(INVESTMENTS)}
-          >
-            {INVESTMENTS}
-          </button>
+        <div className={styles.options}>
+          <button onClick={() => setPage(STATEMENTS)}>{STATEMENTS}</button>
+          <button onClick={() => setPage(INVESTMENTS)}>{INVESTMENTS}</button>
         </div>
         {innerPage()}
       </div>
