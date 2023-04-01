@@ -1,158 +1,77 @@
 {
   "statements": [
     {
+      "id": 1,
       "transaction_type": "debit",
       "amount": 100,
       "date": "2022-01-01 00:00"
     },
     {
+      "id": 2,
       "transaction_type": "debit",
       "amount": 150,
       "date": "2022-01-01 00:00"
     },
     {
+      "id": 3,
       "transaction_type": "credit",
       "amount": 200,
       "date": "2022-01-01 00:00"
     },
     {
+      "id": 4,
       "transaction_type": "credit",
       "amount": 250,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 5,
+      "transaction_type": "debit",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 6,
+      "transaction_type": "credit",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 7,
+      "transaction_type": "credit",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 8,
+      "transaction_type": "credit",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 9,
+      "transaction_type": "debit",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
+      "id": 10,
+      "transaction_type": "debit",
       "amount": 299,
+      "date": "2022-01-01 00:00"
+    }
+  ],
+  "balance": [
+    {
+      "id": 1,
+      "transaction_type": "Bank A",
+      "amount": 9999,
       "date": "2022-01-01 00:00"
     },
     {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
-    },
-    {
-      "transaction_type": "interest",
-      "amount": 299,
+      "id": 2,
+      "transaction_type": "Bank B",
+      "amount": 1001,
       "date": "2022-01-01 00:00"
     }
   ]

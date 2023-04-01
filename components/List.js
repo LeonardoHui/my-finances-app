@@ -3,7 +3,7 @@ import EventItem from "./EventItem";
 
 import styles from "@/styles/List.module.css";
 
-export default function List({ listData, listTitle, height }) {
+export default function List({ listData, listTitle }) {
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>{listTitle}</h1>

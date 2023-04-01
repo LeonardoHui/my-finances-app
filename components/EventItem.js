@@ -13,15 +13,9 @@ export default function EventItem({ evt }) {
         gridTemplateColumns: "repeat(3, 1fr)",
       }}
     >
-      <div className={styles.info}>
-        <t>{evt.date}</t>
-      </div>
-      <div className={styles.info}>
-        <t>R$ {(evt.amount / 100).toFixed(2)}</t>
-      </div>
-      <div className={styles.info}>
-        <t>{evt.transaction_type}</t>
-      </div>
+      <div className={styles.info}>{evt.date}</div>
+      <div className={styles.info}>R$ {(evt.amount / 100).toFixed(2)}</div>
+      <div className={styles.info}>{evt.transaction_type}</div>
     </div>
   );
 }

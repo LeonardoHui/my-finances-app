@@ -28,11 +28,11 @@ export default function DashboardPage() {
       router.push("/account/login");
     }
 
-    fetchData();
+    fetchData("/statements");
   }, []);
 
-  async function fetchData() {
-    const res = await fetch(`${API_URL}/statements`, {
+  async function fetchData(path) {
+    const res = await fetch(`${API_URL + path}`, {
       method: "GET",
       headers: {
         authorization: user,
@@ -49,7 +49,7 @@ export default function DashboardPage() {
       return <Statement list={data} />;
     }
     if (page == INVESTMENTS) {
-      return <Investments />;
+      return <Investments list={data} />;
     }
   }
 
@@ -59,8 +59,24 @@ export default function DashboardPage() {
       {user ? (
         <div className={styles.layout}>
           <div className={styles.options}>
-            <button onClick={() => setPage(STATEMENTS)}>{STATEMENTS}</button>
-            <button onClick={() => setPage(INVESTMENTS)}>{INVESTMENTS}</button>
+            <button
+              onClick={() => {
+                setData();
+                fetchData("/statements");
+                setPage(STATEMENTS);
+              }}
+            >
+              {STATEMENTS}
+            </button>
+            <button
+              onClick={() => {
+                setData();
+                fetchData("/investments");
+                setPage(INVESTMENTS);
+              }}
+            >
+              {INVESTMENTS}
+            </button>
           </div>
           {innerPage()}
         </div>

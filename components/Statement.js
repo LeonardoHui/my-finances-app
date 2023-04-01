@@ -6,22 +6,27 @@ import PieChart from "./PieChart";
 import List from "./List";
 
 export default function Statement({ list }) {
-  const testData = [
-    { label: "Object A", value: 5 },
-    { label: "Object B", value: 1 },
-    { label: "Object C", value: 2 },
-  ];
+  var balance_distribution = [];
+  list.balance.map((item) =>
+    balance_distribution.push({
+      label: item.transaction_type,
+      value: item.amount,
+    })
+  );
 
   return (
     <section className={styles.table}>
       <div className={styles.statements}>
-        <List listData={list} listTitle="Statement" />
+        <List listData={list.statements} listTitle="Statement" />
       </div>
 
-      <List listData={list} listTitle="Bank Balance" />
+      <List listData={list.balance} listTitle="Bank Balance" />
 
       <div className={styles.chart}>
-        <PieChart chartData={testData} chartTitle={"Balance Distribution"} />
+        <PieChart
+          chartData={balance_distribution}
+          chartTitle={"Balance Distribution"}
+        />
       </div>
     </section>
   );
