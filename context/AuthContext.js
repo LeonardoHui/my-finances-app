@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { NEXT_URL } from "@/config/index";
+import { API_URL } from "@/config/index";
 
 const AuthContext = createContext();
 
@@ -10,11 +10,9 @@ export const AuthProvider = ({ children }) => {
 
   const router = useRouter();
 
-  // useEffect(() => checkUserLoggedIn(), []);
-
   //Register user
   const register = async ({ username, email, password }) => {
-    const res = await fetch(`${NEXT_URL}/api/register`, {
+    const res = await fetch(`${API_URL}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     const data = await res.json();
 
     if (res.ok) {
-      setUser(data.jwt);
+      setUser(data.token);
       router.push("/account/dashboard");
     } else {
       setError(data.message);
@@ -38,7 +36,7 @@ export const AuthProvider = ({ children }) => {
 
   //Login user
   const login = async ({ email, password }) => {
-    const res = await fetch(`${NEXT_URL}/api/login`, {
+    const res = await fetch(`${API_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +50,7 @@ export const AuthProvider = ({ children }) => {
     const data = await res.json();
 
     if (res.ok) {
-      setUser(data.jwt);
+      setUser(data.token);
       router.push("/account/dashboard");
     } else {
       setError(data.message);
@@ -61,25 +59,13 @@ export const AuthProvider = ({ children }) => {
 
   //Logout user
   const logout = async (user) => {
-    const res = await fetch(`${NEXT_URL}/api/logout`, {
+    const res = await fetch(`${API_URL}/logout`, {
       method: "POST",
     });
 
     if (res.ok) {
       setUser(null);
       router.push("/");
-    }
-  };
-
-  //Check if user is logged in
-  const checkUserLoggedIn = async (user) => {
-    const res = await fetch(`${NEXT_URL}/api/user`);
-    const data = await res.json();
-
-    if (res.ok) {
-      setUser(data.user);
-    } else {
-      setUser(null);
     }
   };
 

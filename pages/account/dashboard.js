@@ -17,8 +17,9 @@ import { useRouter } from "next/router";
 const STATEMENTS = "STATEMENTS";
 const INVESTMENTS = "INVESTMENTS";
 
-export default function DashboardPage({ statements }) {
+export default function DashboardPage() {
   const [page, setPage] = useState(STATEMENTS);
+  const [data, setData] = useState();
   const { user, logout } = useContext(AuthContext);
   const router = useRouter();
 
@@ -26,15 +27,29 @@ export default function DashboardPage({ statements }) {
     if (!user) {
       router.push("/account/login");
     }
-  });
+
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const res = await fetch(`${API_URL}/statements`, {
+      method: "GET",
+      headers: {
+        authorization: user,
+      },
+    });
+    setData(await res.json());
+  }
 
   function innerPage() {
-    {
-      if (page == STATEMENTS) {
-        return <Statement list={statements} />;
-      } else {
-        return <Investments />;
-      }
+    if (data === undefined) {
+      return <p>Loading ...</p>;
+    }
+    if (page == STATEMENTS) {
+      return <Statement list={data} />;
+    }
+    if (page == INVESTMENTS) {
+      return <Investments />;
     }
   }
 
@@ -60,15 +75,4 @@ export default function DashboardPage({ statements }) {
       )}
     </Layout>
   );
-}
-
-export async function getServerSideProps({ req }) {
-  const res = await fetch(`${API_URL}/api/fakestatements`);
-  const statements = await res.json();
-
-  console.log(req.headers.cookie);
-  console.log(statements);
-  return {
-    props: { statements },
-  };
 }
