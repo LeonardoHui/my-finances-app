@@ -6,11 +6,21 @@
 
 .h1 {
   padding-left: 30px;
-  color: white;
+  color: rgb(225, 225, 255);
 }
 
 .chart {
   height: 80%;
   display: flex;
   justify-content: center;
+}
+
+.empty {
+  background-color: rgb(30, 0, 155);
+  color: rgb(225, 225, 255);
+  border-radius: 10px;
+  padding: 0 30px;
+  box-shadow: -5px 5px 5px rgba(25, 0, 100, 0.4);
+  height: 100%;
+  width: 100%;
 }

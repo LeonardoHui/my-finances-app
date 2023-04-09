@@ -43,16 +43,6 @@ export default function PieChart({ chartData, chartTitle }) {
     ],
   };
 
-  {
-    chartData.map(
-      (elm) => (
-        pieData.labels.push(elm.label),
-        pieData.datasets[0].data.push(elm.value),
-        pieData.datasets[0].backgroundColor.push(random_rgba())
-      )
-    );
-  }
-
   const pieOptions = {
     plugins: {
       // title: {
@@ -70,12 +60,33 @@ export default function PieChart({ chartData, chartTitle }) {
     },
   };
 
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>{chartTitle}</h1>
+  function innerElem() {
+    if (chartData === null || chartData.length === 0) {
+      return (
+        <div className={styles.empty}>
+          <h3>Nothing to show</h3>
+        </div>
+      );
+    }
+
+    chartData.map(
+      (elm) => (
+        pieData.labels.push(elm.label),
+        pieData.datasets[0].data.push(elm.value),
+        pieData.datasets[0].backgroundColor.push(random_rgba())
+      )
+    );
+    return (
       <div className={styles.chart}>
         <Pie data={pieData} options={pieOptions} />
       </div>
+    );
+  }
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.h1}>{chartTitle}</h1>
+      {innerElem()}
     </div>
   );
 }

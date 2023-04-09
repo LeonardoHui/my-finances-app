@@ -27,14 +27,6 @@ export default function BarChart({ chartData, chartTitle }) {
     ],
   };
 
-  {
-    chartData.map(
-      (elm) => (
-        barData.labels.push(elm.label), barData.datasets[0].data.push(elm.value)
-      )
-    );
-  }
-
   const barOptions = {
     plugins: {
       // title: {
@@ -59,12 +51,28 @@ export default function BarChart({ chartData, chartTitle }) {
     maintainAspectRatio: false,
   };
 
+  function innerElem() {
+    if (chartData === null || chartData.length === 0) {
+      return (
+        <div className={styles.empty}>
+          <h3>Nothing to show</h3>
+        </div>
+      );
+    }
+
+    chartData.map(
+      (elm) => (
+        barData.labels.push(elm.label), barData.datasets[0].data.push(elm.value)
+      )
+    );
+
+    return <Bar data={barData} options={barOptions} />;
+  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>{chartTitle}</h1>
-      <div className={styles.chart}>
-        <Bar data={barData} options={barOptions} />
-      </div>
+      <div className={styles.chart}>{innerElem()}</div>
     </div>
   );
 }

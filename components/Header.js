@@ -17,9 +17,11 @@ export default function Header() {
       <div className={styles.subheader}>
         {user ? (
           <div>
-            <li>
-              <Link href="/account/dashboard">Account</Link>
-            </li>
+            <ul>
+              <li>
+                <Link href="/account/dashboard">Account</Link>
+              </li>
+            </ul>
           </div>
         ) : (
           <>
@@ -56,7 +58,7 @@ export default function Header() {
                   <Link href="/account/register">Sign up</Link>
                 </li>
                 <li>
-                  <Link href="/account/login">Login</Link>
+                  <Link href="/account/login">Log in</Link>
                 </li>
               </>
             )}
