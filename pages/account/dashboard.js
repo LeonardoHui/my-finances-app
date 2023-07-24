@@ -5,11 +5,13 @@ import Layout from "@/components/Layout";
 
 import { API_URL } from "@/config/index";
 import Statement from "@/components/Statement";
+import Simulation from "@/components/Simulation";
 import Investments from "@/components/Investments";
 import AuthContext from "@/context/AuthContext";
 
 import styles from "@/styles/Dashboard.module.css";
 import Header from "@/components/Header";
+import SideBar from "@/components/SideBar";
 
 import { useContext } from "react";
 import { useRouter } from "next/router";
@@ -41,54 +43,42 @@ export default function DashboardPage() {
     setData(await res.json());
   }
 
+  function setCurrentPageFunc(pageName) {
+    setPage(pageName);
+  }
+
   function innerPage() {
     if (data === undefined) {
       return <p>Loading ...</p>;
     }
     if (page == STATEMENTS) {
       return <Statement list={data} />;
-    }
-    if (page == INVESTMENTS) {
+    } else if (page == "SIMULATION") {
+      return <Simulation list={data} />;
+    } else if (page == INVESTMENTS) {
       return <Investments list={data} />;
+    } else {
+      return <p>{page}</p>;
     }
   }
 
   return (
     <Layout>
       <Header />
-      {user ? (
-        <div className={styles.layout}>
-          <div className={styles.options}>
-            <button
-              onClick={() => {
-                setData();
-                fetchData("/statements");
-                setPage(STATEMENTS);
-              }}
-            >
-              {STATEMENTS}
-            </button>
-            <button
-              onClick={() => {
-                setData();
-                fetchData("/investments");
-                setPage(INVESTMENTS);
-              }}
-            >
-              {INVESTMENTS}
-            </button>
+      <div className={styles.layout}>
+        <SideBar setCurrentPage={setCurrentPageFunc} />
+        {user ? (
+          <div className={styles.layout2}>{innerPage()}</div>
+        ) : (
+          <div className={styles.error}>
+            <h1>
+              <FaExclamationTriangle /> 401
+            </h1>
+            <h2>Sorry, there is nothing here</h2>
+            <p>Please log in</p>
           </div>
-          {innerPage()}
-        </div>
-      ) : (
-        <div className={styles.error}>
-          <h1>
-            <FaExclamationTriangle /> 401
-          </h1>
-          <h2>Sorry, there is nothing here</h2>
-          <p>Please log in</p>
-        </div>
-      )}
+        )}
+      </div>
     </Layout>
   );
 }

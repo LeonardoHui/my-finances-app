@@ -19,6 +19,29 @@ export default function Investments({ list }) {
     { label: "2008", value: 5 },
   ];
 
+  list = {
+    investments: [
+      { id: 1, date: "2023-01-01", amount: 100, transaction_type: "DEBIT" },
+      { id: 2, date: "2023-01-02", amount: 200, transaction_type: "CREDIT" },
+      { id: 3, date: "2023-01-03", amount: 300, transaction_type: "DEBIT" },
+    ],
+    stock_distribution: [
+      { label: "Object A", value: 0 },
+      { label: "Object B", value: 1 },
+      { label: "Object C", value: 2 },
+    ],
+    dividend_yied: [
+      { label: "Object A", value: 0 },
+      { label: "Object B", value: 1 },
+      { label: "Object C", value: 2 },
+    ],
+    dividend_paid: [
+      { label: "Object A", value: 0 },
+      { label: "Object B", value: 1 },
+      { label: "Object C", value: 2 },
+    ],
+  };
+
   return (
     <section className={styles.table}>
       <List listData={list.investments} listTitle="Stocks" />

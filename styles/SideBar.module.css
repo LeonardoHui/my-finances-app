@@ -1,0 +1,19 @@
+.sidebar {
+  color: rgb(199, 35, 35);
+}
+
+.ul {
+  list-style: none; /* Remove default bullets */
+  color: white;
+}
+
+.li {
+  font-size: x-large;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.li:hover {
+  color: rgb(200, 200, 255);
+}
