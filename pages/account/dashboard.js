@@ -69,17 +69,7 @@ export default function DashboardPage() {
       <Header />
       <div className={styles.layout}>
         <SideBar setCurrentPage={setCurrentPageFunc} />
-        {user ? (
-          <div className={styles.layout2}>{innerPage()}</div>
-        ) : (
-          <div className={styles.error}>
-            <h1>
-              <FaExclamationTriangle /> 401
-            </h1>
-            <h2>Sorry, there is nothing here</h2>
-            <p>Please log in</p>
-          </div>
-        )}
+        <div className={styles.layout2}>{innerPage()}</div>
       </div>
     </Layout>
   );
