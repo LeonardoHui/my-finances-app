@@ -1,12 +1,12 @@
 .table {
   width: 1200px;
-  margin: 5vh auto;
-
+  height: 100%;
+  margin: 0vh auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: 40vh 30vh 20vh; */
-  column-gap: 100px;
-  row-gap: 50px;
+  grid-template-rows: 50% 35%;
+  grid-template-columns: 35vw 35vw;
+  column-gap: 50px;
   justify-content: center;
   align-items: center;
 }

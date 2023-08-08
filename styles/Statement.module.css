@@ -1,9 +1,10 @@
 .table {
   width: 1200px;
-  margin: 5vh auto;
+  height: 100%;
+  margin: 0vh auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 30vh 50vh;
+  grid-template-rows: 35% 50%;
   grid-template-columns: 35vw 35vw;
   column-gap: 50px;
   justify-content: center;

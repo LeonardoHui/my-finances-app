@@ -1,27 +1,13 @@
 import React from "react";
-
 import styles from "@/styles/Charts.module.css";
+import { hslToRgb } from "utils/RGB";
 
 // Do not remove Chart
 import { Chart } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 
-function random_rgba() {
-  var o = Math.round,
-    r = Math.random,
-    p = 155;
-  return (
-    "rgb(" +
-    o(r() * 255) +
-    "," +
-    o(r() * p + 100) + // +55 tp avoid full black
-    "," +
-    "0" +
-    ")"
-  );
-}
-
 /*  
+Example of income chartData
 chartData = 
 [
     {label: "Object A", value: 0},
@@ -70,13 +56,18 @@ export default function PieChart({ chartData, chartTitle }) {
       );
     }
 
-    chartData.map(
-      (elm) => (
-        pieData.labels.push(elm.label),
-        pieData.datasets[0].data.push(elm.value),
-        pieData.datasets[0].backgroundColor.push(random_rgba())
-      )
-    );
+    const step = 360 / chartData.length;
+    for (let index = 0; index < chartData.length; index++) {
+      const hue = (index * step) % 360;
+      const rgb = hslToRgb(hue, 75, 50);
+
+      pieData.labels.push(chartData[index].label);
+      pieData.datasets[0].data.push(chartData[index].value),
+        pieData.datasets[0].backgroundColor.push(
+          `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`
+        );
+    }
+
     return (
       <div className={styles.piechart}>
         <Pie data={pieData} options={pieOptions} />

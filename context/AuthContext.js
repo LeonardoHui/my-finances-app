@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 import { useRouter } from "next/router";
 import { API_URL } from "@/config/index";
 

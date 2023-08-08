@@ -6,7 +6,7 @@ import styles from "@/styles/GenericSubpage.module.css";
 import LineChart from "./LineChart";
 
 export default function Simulation() {
-  const { user, logout } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -37,12 +37,14 @@ export default function Simulation() {
     if (data === undefined) {
       return <p>Loading ...</p>;
     }
-    return <LineChart chartData={data} chartTitle={"Simulation"} />;
+    return (
+      <section className={styles.page}>
+        <div className={styles.chart}>
+          <LineChart chartData={data} chartTitle={"Simulation"} />
+        </div>
+      </section>
+    );
   }
 
-  return (
-    <section className={styles.page}>
-      <div className={styles.chart}>{loadChart()}</div>
-    </section>
-  );
+  return loadChart();
 }
