@@ -20,6 +20,44 @@
   cursor: pointer;
 }
 
-.li:hover {
+.icons {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  color: gold;
+}
+
+.desc {
+  visibility: hidden;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  transition: width 0.3s;
+}
+
+.li:hover .desc {
   color: rgb(200, 200, 255);
+}
+
+.sidebar:hover .desc {
+  margin-left: 10px;
+  width: 150px;
+  animation: 1.5s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+.li:hover .icons {
+  color: goldenrod;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
