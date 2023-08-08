@@ -11,44 +11,46 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <Link href="/">My Finances</Link>
+      <div className={styles.subheader}>
+        <div className={styles.logo}>
+          {user ? (
+            <Link href="/account/dashboard">My Finances</Link>
+          ) : (
+            <Link href="/">My Finances</Link>
+          )}
+        </div>
+        <div>
+          {user ? (
+            <></>
+          ) : (
+            <>
+              <nav>
+                <ul>
+                  <li>
+                    <Link href="/solutions">Solutions</Link>
+                  </li>
+                  <li>
+                    <Link href="/pricing">Pricing</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About us</Link>
+                  </li>
+                </ul>
+              </nav>
+            </>
+          )}{" "}
+        </div>
       </div>
       <div className={styles.subheader}>
-        {user ? (
-          <div>
-            <ul>
-              <li>
-                <Link href="/account/dashboard">Account</Link>
-              </li>
-            </ul>
-          </div>
-        ) : (
-          <>
-            <nav>
-              <ul>
-                <li>
-                  <Link href="/solutions">Solutions</Link>
-                </li>
-                <li>
-                  <Link href="/pricing">Pricing</Link>
-                </li>
-                <li>
-                  <Link href="/about">About us</Link>
-                </li>
-              </ul>
-            </nav>
-          </>
-        )}
         <nav className={styles.login}>
           <ul>
             {user ? (
               // If logged in
               <>
                 <li>
-                  <button onClick={() => logout()}>
-                    <FaSignOutAlt /> Logout
-                  </button>
+                  <div className={styles.options} onClick={() => logout()}>
+                    Logout
+                  </div>
                 </li>
               </>
             ) : (

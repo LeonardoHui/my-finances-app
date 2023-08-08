@@ -4,10 +4,11 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import Layout from "@/components/Layout";
 
 import { API_URL } from "@/config/index";
+import AuthContext from "@/context/AuthContext";
 import Statement from "@/components/Statement";
 import Simulation from "@/components/Simulation";
 import Investments from "@/components/Investments";
-import AuthContext from "@/context/AuthContext";
+import Evolution from "@/components/Evolution";
 
 import styles from "@/styles/Dashboard.module.css";
 import Header from "@/components/Header";
@@ -54,9 +55,11 @@ export default function DashboardPage() {
     if (page == STATEMENTS) {
       return <Statement list={data} />;
     } else if (page == "SIMULATION") {
-      return <Simulation list={data} />;
+      return <Simulation />;
     } else if (page == INVESTMENTS) {
       return <Investments list={data} />;
+    } else if (page == "EVOLUTION") {
+      return <Evolution list={data} />;
     } else {
       return <p>{page}</p>;
     }

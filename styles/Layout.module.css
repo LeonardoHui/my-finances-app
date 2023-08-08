@@ -9,8 +9,8 @@
   height: 100%;
   align-items: center;
   justify-content: stretch;
-  background: linear-gradient(rgb(0, 0, 90) 10%, rgba(0, 140, 255, 0.5)),
-    rgb(0, 0, 90);
+  background: linear-gradient(rgb(0, 0, 115) 10%, rgba(0, 140, 255, 0.5)),
+    rgb(0, 0, 115);
 }
 
 .general {

@@ -1,0 +1,12 @@
+.page {
+  width: 60vw;
+  height: 100%;
+  margin: 5vh auto;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  height: 100%;
+}

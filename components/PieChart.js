@@ -58,6 +58,7 @@ export default function PieChart({ chartData, chartTitle }) {
     layout: {
       padding: 6,
     },
+    animation: { animateRotate: true, animateScale: true },
   };
 
   function innerElem() {
@@ -77,7 +78,7 @@ export default function PieChart({ chartData, chartTitle }) {
       )
     );
     return (
-      <div className={styles.chart}>
+      <div className={styles.piechart}>
         <Pie data={pieData} options={pieOptions} />
       </div>
     );

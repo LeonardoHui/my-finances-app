@@ -1,16 +1,22 @@
 .sidebar {
-  color: rgb(199, 35, 35);
+  height: 90vh;
+  background: linear-gradient(rgb(0, 0, 125) 10%, rgba(0, 125, 255, 0.5)),
+    rgb(0, 0, 125);
+  box-shadow: 0 2px 5px rgba(0, 0, 75, 0.9);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 .ul {
   list-style: none; /* Remove default bullets */
   color: white;
+  padding-inline-start: 0;
 }
 
 .li {
   font-size: x-large;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 0px 30px;
+  padding-top: 30px;
   cursor: pointer;
 }
 

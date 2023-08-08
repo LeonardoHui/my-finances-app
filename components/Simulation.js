@@ -1,34 +1,48 @@
-import React from "react";
-import EventItem from "@/components/EventItem";
-import styles from "@/styles/Statement.module.css";
-
-import PieChart from "./PieChart";
-import List from "./List";
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import AuthContext from "@/context/AuthContext";
+import { API_URL } from "@/config/index";
+import styles from "@/styles/GenericSubpage.module.css";
 import LineChart from "./LineChart";
 
-export default function Simulation({ list1 }) {
-  const list = {
-    lines: ["deposits", "selic"],
-    values: [
-      { month: "jan", value: [1, 1] },
-      { month: "fev", value: [1, 1.1] },
-      { month: "mar", value: [2.2, 2.5] },
-      { month: "apr", value: [3, 3] },
-      { month: "may", value: [4, 4.1] },
-      { month: "jun", value: [5, 5.5] },
-      { month: "jul", value: [5.8, 6] },
-      { month: "aug", value: [6, 6.5] },
-      { month: "set", value: [7, 8] },
-    ],
-  };
+export default function Simulation() {
+  const { user, logout } = useContext(AuthContext);
+  const [data, setData] = useState();
 
-  list1 = list;
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(
+          `${API_URL + "/simulation?index=selic,ipca"}`,
+          {
+            method: "GET",
+            headers: { authorization: user },
+          }
+        );
+        if (response.ok) {
+          const responseData = await response.json();
+          setData(responseData);
+        } else {
+          throw new Error("Request failed.");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  function loadChart() {
+    if (data === undefined) {
+      return <p>Loading ...</p>;
+    }
+    return <LineChart chartData={data} chartTitle={"Simulation"} />;
+  }
 
   return (
-    <section className={styles.table}>
-      <div className={styles.chart}>
-        <LineChart chartData={list1} chartTitle={"Simulation"} />
-      </div>
+    <section className={styles.page}>
+      <div className={styles.chart}>{loadChart()}</div>
     </section>
   );
 }

@@ -1,18 +1,20 @@
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: rgb(0, 0, 90);
+  background: rgb(0, 0, 115);
   height: 6vh;
-  padding: 0 10vw;
-  box-shadow: 0 2px 5px rgba(0, 0, 90, 0.5);
+  width: 100vw;
+  /* padding: 0 10vw; */
+  box-shadow: 0 3px 5px rgba(0, 0, 90, 0.75);
 }
 
 .subheader {
   display: flex;
   justify-content: space-between;
-  width: 60vw;
+  /* width: 100vw; */
   align-items: center;
-  background: rgb(0, 0, 90);
+  background: rgb(0, 0, 115);
 }
 
 .header a {
@@ -24,8 +26,22 @@
   font-weight: bolder;
 }
 
+.options {
+  color: rgb(225, 225, 255);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.options:hover {
+  color: rgb(200, 200, 255);
+}
+
 .login {
   text-transform: uppercase;
+  padding-right: 20px;
 }
 
 .header a:hover {
@@ -47,6 +63,7 @@
   font-weight: bolder;
   font-family: serif;
   font-size: 28px;
+  padding-left: 20px;
 }
 
 .logo a:hover {

@@ -1,5 +1,4 @@
 import React from "react";
-import EventItem from "@/components/EventItem";
 import styles from "@/styles/Statement.module.css";
 
 import PieChart from "./PieChart";

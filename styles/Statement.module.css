@@ -3,7 +3,8 @@
   margin: 5vh auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 40vh 40vh;
+  grid-template-rows: 30vh 50vh;
+  grid-template-columns: 35vw 35vw;
   column-gap: 50px;
   justify-content: center;
   align-items: center;
@@ -16,4 +17,5 @@
 
 .chart {
   height: 100%;
+  width: 100%;
 }
