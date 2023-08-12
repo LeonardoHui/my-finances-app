@@ -39,7 +39,10 @@ export default function Statement() {
     var balance_distribution = [];
     data.balance.map((item) =>
       balance_distribution.push({
-        label: item.transaction_type,
+        label:
+          item.transaction_type != undefined
+            ? item.transaction_type
+            : item.bank,
         value: item.amount,
       })
     );

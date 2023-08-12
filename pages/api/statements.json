@@ -2,83 +2,323 @@
   "statements": [
     {
       "id": 1,
-      "transaction_type": "debit",
-      "amount": 100,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "CREDIT",
+      "amount": 26454,
+      "date": "2020-01-02T00:00:00Z"
     },
     {
       "id": 2,
-      "transaction_type": "debit",
-      "amount": 150,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 4994,
+      "date": "2020-01-03T00:00:00Z"
     },
     {
       "id": 3,
-      "transaction_type": "credit",
-      "amount": 200,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 4982,
+      "date": "2020-01-03T00:00:00Z"
     },
     {
       "id": 4,
-      "transaction_type": "credit",
-      "amount": 250,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 3499,
+      "date": "2020-02-03T00:00:00Z"
     },
     {
       "id": 5,
-      "transaction_type": "debit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 2981,
+      "date": "2020-02-03T00:00:00Z"
     },
     {
       "id": 6,
-      "transaction_type": "credit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 9996,
+      "date": "2020-03-16T00:00:00Z"
     },
     {
       "id": 7,
-      "transaction_type": "credit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "CREDIT",
+      "amount": 2500,
+      "date": "2020-10-05T00:00:00Z"
     },
     {
       "id": 8,
-      "transaction_type": "credit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 670,
+      "date": "2020-10-07T00:00:00Z"
     },
     {
       "id": 9,
-      "transaction_type": "debit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 452,
+      "date": "2020-10-07T00:00:00Z"
     },
     {
       "id": 10,
-      "transaction_type": "debit",
-      "amount": 299,
-      "date": "2022-01-01 00:00"
+      "transaction_type": "DEBIT",
+      "amount": 711,
+      "date": "2020-10-07T00:00:00Z"
+    },
+    {
+      "id": 11,
+      "transaction_type": "CREDIT",
+      "amount": 225,
+      "date": "2020-10-15T00:00:00Z"
+    },
+    {
+      "id": 12,
+      "transaction_type": "CREDIT",
+      "amount": 1500,
+      "date": "2020-10-19T00:00:00Z"
+    },
+    {
+      "id": 13,
+      "transaction_type": "DEBIT",
+      "amount": 2114,
+      "date": "2020-10-21T00:00:00Z"
+    },
+    {
+      "id": 14,
+      "transaction_type": "CREDIT",
+      "amount": 182,
+      "date": "2020-10-23T00:00:00Z"
+    },
+    {
+      "id": 15,
+      "transaction_type": "CREDIT",
+      "amount": 360,
+      "date": "2020-11-10T00:00:00Z"
+    },
+    {
+      "id": 16,
+      "transaction_type": "CREDIT",
+      "amount": 1584,
+      "date": "2020-11-16T00:00:00Z"
+    },
+    {
+      "id": 17,
+      "transaction_type": "CREDIT",
+      "amount": 250,
+      "date": "2020-11-16T00:00:00Z"
+    },
+    {
+      "id": 18,
+      "transaction_type": "CREDIT",
+      "amount": 3000,
+      "date": "2020-11-23T00:00:00Z"
+    },
+    {
+      "id": 19,
+      "transaction_type": "DEBIT",
+      "amount": 1249,
+      "date": "2020-11-25T00:00:00Z"
+    },
+    {
+      "id": 20,
+      "transaction_type": "DEBIT",
+      "amount": 1694,
+      "date": "2020-11-25T00:00:00Z"
+    },
+    {
+      "id": 21,
+      "transaction_type": "CREDIT",
+      "amount": 185,
+      "date": "2020-11-25T00:00:00Z"
+    },
+    {
+      "id": 22,
+      "transaction_type": "CREDIT",
+      "amount": 370,
+      "date": "2020-12-08T00:00:00Z"
+    },
+    {
+      "id": 23,
+      "transaction_type": "CREDIT",
+      "amount": 2880,
+      "date": "2020-12-14T00:00:00Z"
+    },
+    {
+      "id": 24,
+      "transaction_type": "CREDIT",
+      "amount": 265,
+      "date": "2020-12-14T00:00:00Z"
+    },
+    {
+      "id": 25,
+      "transaction_type": "CREDIT",
+      "amount": 6000,
+      "date": "2020-12-16T00:00:00Z"
+    },
+    {
+      "id": 26,
+      "transaction_type": "DEBIT",
+      "amount": 6112,
+      "date": "2020-12-18T00:00:00Z"
+    },
+    {
+      "id": 27,
+      "transaction_type": "CREDIT",
+      "amount": 564,
+      "date": "2020-12-23T00:00:00Z"
+    },
+    {
+      "id": 28,
+      "transaction_type": "DEBIT",
+      "amount": 184,
+      "date": "2021-01-06T00:00:00Z"
+    },
+    {
+      "id": 29,
+      "transaction_type": "CREDIT",
+      "amount": 350,
+      "date": "2021-01-11T00:00:00Z"
+    },
+    {
+      "id": 30,
+      "transaction_type": "CREDIT",
+      "amount": 7560,
+      "date": "2021-01-15T00:00:00Z"
+    },
+    {
+      "id": 31,
+      "transaction_type": "CREDIT",
+      "amount": 265,
+      "date": "2021-01-15T00:00:00Z"
+    },
+    {
+      "id": 32,
+      "transaction_type": "CREDIT",
+      "amount": 585,
+      "date": "2021-01-22T00:00:00Z"
+    },
+    {
+      "id": 33,
+      "transaction_type": "CREDIT",
+      "amount": 485,
+      "date": "2021-02-09T00:00:00Z"
+    },
+    {
+      "id": 34,
+      "transaction_type": "CREDIT",
+      "amount": 7560,
+      "date": "2021-02-12T00:00:00Z"
+    },
+    {
+      "id": 35,
+      "transaction_type": "CREDIT",
+      "amount": 280,
+      "date": "2021-02-12T00:00:00Z"
+    },
+    {
+      "id": 36,
+      "transaction_type": "CREDIT",
+      "amount": 5000,
+      "date": "2021-02-22T00:00:00Z"
+    },
+    {
+      "id": 37,
+      "transaction_type": "DEBIT",
+      "amount": 2838,
+      "date": "2021-02-25T00:00:00Z"
+    },
+    {
+      "id": 38,
+      "transaction_type": "DEBIT",
+      "amount": 1891,
+      "date": "2021-02-25T00:00:00Z"
+    },
+    {
+      "id": 39,
+      "transaction_type": "CREDIT",
+      "amount": 739,
+      "date": "2021-02-25T00:00:00Z"
+    },
+    {
+      "id": 40,
+      "transaction_type": "CREDIT",
+      "amount": 300,
+      "date": "2021-03-08T00:00:00Z"
+    },
+    {
+      "id": 41,
+      "transaction_type": "CREDIT",
+      "amount": 7000,
+      "date": "2021-03-10T00:00:00Z"
+    },
+    {
+      "id": 42,
+      "transaction_type": "CREDIT",
+      "amount": 280,
+      "date": "2021-03-12T00:00:00Z"
+    },
+    {
+      "id": 43,
+      "transaction_type": "CREDIT",
+      "amount": 9720,
+      "date": "2021-03-12T00:00:00Z"
+    },
+    {
+      "id": 44,
+      "transaction_type": "CREDIT",
+      "amount": 1350,
+      "date": "2021-03-12T00:00:00Z"
+    },
+    {
+      "id": 45,
+      "transaction_type": "DEBIT",
+      "amount": 4080,
+      "date": "2021-03-16T00:00:00Z"
+    },
+    {
+      "id": 46,
+      "transaction_type": "DEBIT",
+      "amount": 3042,
+      "date": "2021-03-19T00:00:00Z"
+    },
+    {
+      "id": 47,
+      "transaction_type": "CREDIT",
+      "amount": 10000,
+      "date": "2021-03-24T00:00:00Z"
+    },
+    {
+      "id": 48,
+      "transaction_type": "CREDIT",
+      "amount": 889,
+      "date": "2021-03-25T00:00:00Z"
+    },
+    {
+      "id": 49,
+      "transaction_type": "DEBIT",
+      "amount": 10115,
+      "date": "2021-03-31T00:00:00Z"
+    },
+    {
+      "id": 50,
+      "transaction_type": "CREDIT",
+      "amount": 4000,
+      "date": "2021-04-05T00:00:00Z"
     }
   ],
   "balance": [
     {
       "id": 1,
-      "transaction_type": "Bank A",
-      "amount": 500,
-      "date": "2022-01-01 00:00"
+      "bank": "BANK ONE",
+      "amount": 26454,
+      "date": "2020-01-02T00:00:00Z"
     },
     {
       "id": 2,
-      "transaction_type": "Bank B",
-      "amount": 1001,
-      "date": "2022-01-01 00:00"
+      "bank": "BANK TWO",
+      "amount": 4994,
+      "date": "2020-01-03T00:00:00Z"
     },
     {
       "id": 3,
-      "transaction_type": "Bank C",
-      "amount": 2002,
-      "date": "2022-01-01 00:00"
+      "bank": "BANK THREE",
+      "amount": 4982,
+      "date": "2020-01-03T00:00:00Z"
     }
   ]
 }

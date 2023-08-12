@@ -4,7 +4,7 @@
   margin: 0vh auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 35% 50%;
+  grid-template-rows: 35vh 50vh;
   grid-template-columns: 35vw 35vw;
   column-gap: 50px;
   justify-content: center;
@@ -18,5 +18,4 @@
 
 .chart {
   height: 100%;
-  width: 100%;
 }

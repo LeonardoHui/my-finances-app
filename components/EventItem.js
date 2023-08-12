@@ -15,7 +15,9 @@ export default function EventItem({ evt }) {
     >
       <div className={styles.info}>{evt.date}</div>
       <div className={styles.info}>R$ {(evt.amount / 100).toFixed(2)}</div>
-      <div className={styles.info}>{evt.transaction_type}</div>
+      <div className={styles.info}>
+        {evt.transaction_type != undefined ? evt.transaction_type : evt.bank}
+      </div>
     </div>
   );
 }
