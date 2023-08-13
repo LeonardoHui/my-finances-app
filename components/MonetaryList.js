@@ -1,14 +1,16 @@
 import React from "react";
-import EventItem from "./EventItem";
+import MonetaryEventItem from "./MonetaryEventItem";
 
 import styles from "@/styles/List.module.css";
 
-export default function List({ listData, listTitle }) {
+export default function MonetaryList({ listData, listTitle }) {
   function innerElem() {
     if (listData === null || listData.length === 0) {
       return <h3>No events to show</h3>;
     }
-    return listData.map((stmt) => <EventItem key={stmt.id} evt={stmt} />);
+    return listData.map((stmt) => (
+      <MonetaryEventItem key={stmt.id} evt={stmt} />
+    ));
   }
 
   return (

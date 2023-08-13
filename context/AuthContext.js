@@ -59,14 +59,14 @@ export const AuthProvider = ({ children }) => {
 
   //Logout user
   const logout = async (user) => {
-    const res = await fetch(`${API_URL}/logout`, {
-      method: "POST",
-    });
+    // const res = await fetch(`${API_URL}/logout`, {
+    //   method: "POST",
+    // });
 
-    if (res.ok) {
-      setUser(null);
-      router.push("/");
-    }
+    // if (res.ok) {
+    setUser(null);
+    router.push("/");
+    // }
   };
 
   const resetError = () => {

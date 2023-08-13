@@ -6,7 +6,7 @@ import AuthContext from "@/context/AuthContext";
 import { API_URL } from "@/config/index";
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
-import List from "./List";
+import MonetaryList from "./MonetaryList";
 
 export default function Investments() {
   const { user } = useContext(AuthContext);
@@ -37,11 +37,20 @@ export default function Investments() {
     if (data === undefined) {
       return <p>Loading ...</p>;
     }
+
+    var stock_distribution = [];
+    data.investments.map((item) =>
+      stock_distribution.push({
+        label: item.description,
+        value: item.amount,
+      })
+    );
+
     return (
       <section className={styles.table}>
-        <List listData={data.investments} listTitle="Stocks" />
+        <MonetaryList listData={data.investments} listTitle="Stocks" />
         <PieChart
-          chartData={data.stock_distribution}
+          chartData={stock_distribution}
           chartTitle={"Stocks Distribution"}
         />
         <BarChart

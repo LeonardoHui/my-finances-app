@@ -2,74 +2,46 @@
   "investments": [
     {
       "id": 1,
-      "transaction_type": "Stock A",
+      "description": "Stock A",
       "amount": 100,
       "date": "2022-01-01 00:00"
     },
 
     {
       "id": 2,
-      "transaction_type": "Stock B",
+      "description": "Stock B",
       "amount": 150,
       "date": "2022-01-01 00:00"
     },
     {
       "id": 3,
-      "transaction_type": "Stock C",
+      "description": "Stock C",
       "amount": 200,
       "date": "2022-01-01 00:00"
     },
     {
       "id": 4,
-      "transaction_type": "Stock D",
+      "description": "Stock D",
       "amount": 250,
       "date": "2022-01-01 00:00"
     },
     {
       "id": 5,
-      "transaction_type": "Stock E",
+      "description": "Stock E",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
       "id": 6,
-      "transaction_type": "Stock F",
+      "description": "Stock F",
       "amount": 299,
       "date": "2022-01-01 00:00"
     },
     {
       "id": 7,
-      "transaction_type": "Stock A",
+      "description": "Stock A",
       "amount": 100,
       "date": "2022-01-01 00:00"
-    }
-  ],
-  "stock_distribution": [
-    {
-      "label": "Stock A",
-      "value": 200
-    },
-    {
-      "label": "Stock B",
-      "value": 150
-    },
-    {
-      "label": "Stock C",
-      "value": 200
-    },
-
-    {
-      "label": "Stock D",
-      "value": 250
-    },
-    {
-      "label": "Stock E",
-      "value": 299
-    },
-
-    {
-      "label": "Stock F",
-      "value": 299
     }
   ],
   "dividend_yied": [

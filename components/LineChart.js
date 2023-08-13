@@ -72,7 +72,7 @@ export default function LineChart({ chartData, chartTitle }) {
     }
 
     for (let i = 0; i < chartData.values.length; i++) {
-      lineData.labels.push(chartData.values[i].month);
+      lineData.labels.push(chartData.values[i].date);
       for (let j = 0; j < chartData.values[i].value.length; j++) {
         lineData.datasets[j].data.push(chartData.values[i].value[j]);
       }

@@ -5,7 +5,7 @@ import styles from "@/styles/Statement.module.css";
 import AuthContext from "@/context/AuthContext";
 import { API_URL } from "@/config/index";
 import PieChart from "./PieChart";
-import List from "./List";
+import MonetaryList from "./MonetaryList";
 
 export default function Statement() {
   const { user } = useContext(AuthContext);
@@ -39,19 +39,16 @@ export default function Statement() {
     var balance_distribution = [];
     data.balance.map((item) =>
       balance_distribution.push({
-        label:
-          item.transaction_type != undefined
-            ? item.transaction_type
-            : item.bank,
+        label: item.description,
         value: item.amount,
       })
     );
     return (
       <section className={styles.table}>
         <div className={styles.statements}>
-          <List listData={data.statements} listTitle="Statement" />
+          <MonetaryList listData={data.statements} listTitle="Statement" />
         </div>
-        <List listData={data.balance} listTitle="Bank Balance" />
+        <MonetaryList listData={data.balance} listTitle="Bank Balance" />
         <div className={styles.chart}>
           <PieChart
             chartData={balance_distribution}

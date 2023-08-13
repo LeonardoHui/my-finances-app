@@ -78,7 +78,7 @@ export default function PieChart({ chartData, chartTitle }) {
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>{chartTitle}</h1>
-      {innerElem()}
+      <div className={styles.chart}>{innerElem()}</div>
     </div>
   );
 }
